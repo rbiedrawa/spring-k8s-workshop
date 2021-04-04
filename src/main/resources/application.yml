@@ -12,4 +12,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: metrics,health,info,env
+        include: metrics,health,info,env,prometheus
