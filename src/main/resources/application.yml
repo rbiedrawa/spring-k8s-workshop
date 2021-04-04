@@ -1,5 +1,5 @@
 app:
-  hello: "${APP_HELLO:Hello from container}"
+  hello: "Hello from local"
   secret: "${K8S_SECRET:default}"
 
 server:

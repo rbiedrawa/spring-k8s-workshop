@@ -8,6 +8,7 @@ This repository contains sample Spring Boot application, k8s definitions and sca
 * How to wait for container lifecycle processes to finish.
 * How to enable **graceful shutdown**.
 * How to expose metrics.
+* How to configure **logstash-logback-encoder**.
 * How to **debug** application running inside k8s.
 * How to use **live-reload** feature for faster development.
 * How to use common kubectl commands and generate k8s definitions.  

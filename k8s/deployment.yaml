@@ -42,15 +42,22 @@ spec:
           httpGet:
             path: /actuator/health/readiness
             port: 8080
+        envFrom:
+#          - secretRef:
+#              name: spring-k8s-workshop-secret
+          - configMapRef:
+              name: spring-k8s-workshop-configmap
         env:
           - name: K8S_SECRET
             valueFrom:
               secretKeyRef:
                 name: spring-k8s-workshop-secret
                 key: secret
-          - name: APP_HELLO
-            valueFrom:
-              configMapKeyRef:
-                name: spring-k8s-workshop-configmap
-                key: app-hello
+#          - name: APP_HELLO
+#            valueFrom:
+#              configMapKeyRef:
+#                name: spring-k8s-workshop-configmap
+#                key: app-hello
+
+
 

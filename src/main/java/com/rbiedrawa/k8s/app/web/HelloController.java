@@ -20,6 +20,7 @@ public class HelloController {
 
     @GetMapping
     ResponseEntity<String> hello() {
+        log.info("Hello requested...");
         return ResponseEntity.ok(String.format("env variable %s, Secret %s", envVariable, secret));
     }
 }
