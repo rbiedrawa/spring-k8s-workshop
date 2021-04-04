@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: spring-k8s-workshop
+  labels:
+    name: spring-k8s-workshop

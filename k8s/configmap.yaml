@@ -1,0 +1,8 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  namespace: spring-k8s-workshop
+  name: spring-k8s-workshop-configmap
+data:
+  app-hello: "Hello From k8s!!!!"

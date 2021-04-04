@@ -1,0 +1,15 @@
+app:
+  hello: "${APP_HELLO:Hello from container}"
+  secret: "${K8S_SECRET:default}"
+
+server:
+  shutdown: graceful
+
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: metrics,health,info,env

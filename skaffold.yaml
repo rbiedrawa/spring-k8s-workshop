@@ -1,0 +1,19 @@
+apiVersion: skaffold/v2beta13
+kind: Config
+metadata:
+  name: spring-k8s-workshop
+build:
+  artifacts:
+  - image: spring-k8s-workshop
+    buildpacks:
+      builder: gcr.io/buildpacks/builder:v1
+deploy:
+  kubectl:
+#    defaultNamespace: spring-k8s-workshop
+    manifests:
+    - k8s/namespace.yml
+    - k8s/configmap.yaml
+    - k8s/deployment.yaml
+    - k8s/rbac.yml
+    - k8s/secret.yaml
+    - k8s/service.yaml
