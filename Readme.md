@@ -126,6 +126,7 @@ echo -n "Secret from k8s" | base64 | pbcopy
 * [Skaffold - Github releases](https://github.com/GoogleContainerTools/skaffold/releases)
 * [Google Cloud - Cloud Code](https://cloud.google.com/code)
 * [Cloud-native development in the IDE with Cloud Code](https://www.youtube.com/watch?v=g9gIgiNsRgg)
+* [Best Practices to Spring to Kubernetes Easier and Faster by Ray Tsang](https://www.youtube.com/watch?v=c16oOeTfFXM)
 * [k9s](https://github.com/derailed/k9s)
 
 ## License
