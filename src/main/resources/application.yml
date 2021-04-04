@@ -5,6 +5,10 @@ app:
 server:
   shutdown: graceful
 
+spring:
+  application:
+    name: spring-k8s-workshop
+
 management:
   endpoint:
     health:
@@ -13,3 +17,6 @@ management:
     web:
       exposure:
         include: metrics,health,info,env,prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}
