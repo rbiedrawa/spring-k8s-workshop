@@ -5,5 +5,5 @@ metadata:
   namespace: spring-k8s-workshop
   name: spring-k8s-workshop-configmap
 data:
-  APP_HELLO: "Hello From k8s!!!!"
+  APP_HELLO: "Hello from k8s!!!!"
   SPRING_PROFILES_ACTIVE: "dev"

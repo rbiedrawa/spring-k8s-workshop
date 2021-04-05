@@ -4,7 +4,7 @@ This repository contains sample Spring Boot application, k8s definitions and sca
 
 ## What You will learn
 
-* How to setup **Readiness** and **liveness** probes.
+* How to set up **Readiness** and **liveness** probes.
 * How to wait for container lifecycle processes to finish.
 * How to enable **graceful shutdown**.
 * How to expose metrics.
@@ -31,8 +31,6 @@ Build docker image.
 ```
 
 ### Usage
-
-Below three common approaches how to use Kubernetes for local development purposes, choose Your preferred way.
 
 #### Kubectl
 
