@@ -1,6 +1,6 @@
 app:
   hello: "Hello from local"
-  secret: "${app_secret:local}"
+  secret: "local"
 
 server:
   shutdown: graceful

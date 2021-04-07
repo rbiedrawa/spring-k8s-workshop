@@ -51,10 +51,8 @@ spec:
         - name: secret-volume
           secret:
             secretName: spring-k8s-workshop-secret
-            items:
-              - key: app.secret
-                path: app_secret
-              - key: other.secret
-                path: other_secret
+#            items:
+#              - key: app.secret
+#                path: app.secret
 
 
