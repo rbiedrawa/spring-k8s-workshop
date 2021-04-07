@@ -41,21 +41,20 @@ spec:
         volumeMounts:
           - name: config-volume
             mountPath: /workspace/config
-        env:
-          - name: K8S_SECRET
-            valueFrom:
-              secretKeyRef:
-                name: spring-k8s-workshop-secret
-                key: secret
+          - name: secret-volume
+            mountPath: "/etc/config/secrets"
+            readOnly: true
       volumes:
         - name: config-volume
           configMap:
             name: spring-k8s-workshop-configmap
-#          - name: APP_HELLO
-#            valueFrom:
-#              configMapKeyRef:
-#                name: spring-k8s-workshop-configmap
-#                key: app-hello
-
+        - name: secret-volume
+          secret:
+            secretName: spring-k8s-workshop-secret
+            items:
+              - key: app.secret
+                path: app_secret
+              - key: other.secret
+                path: other_secret
 
 

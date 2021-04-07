@@ -1,6 +1,6 @@
 app:
   hello: "Hello from local"
-  secret: "${K8S_SECRET:default}"
+  secret: "${app_secret:local}"
 
 server:
   shutdown: graceful
@@ -20,3 +20,11 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
+
+---
+spring:
+  config:
+    activate.on-cloud-platform: kubernetes
+    import: "optional:configtree:/etc/config/*/,optional:file:./config/"
+
+example.activation.property: "This should be visible if platform is k8s:>"

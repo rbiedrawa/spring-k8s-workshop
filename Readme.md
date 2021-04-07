@@ -122,6 +122,7 @@ echo -n "Secret from k8s" | base64 | pbcopy
 ## References
 
 * [Spring on Kubernetes](https://spring.io/guides/topicals/spring-on-kubernetes/)
+* [Spring configtree](https://docs.spring.io/spring-boot/docs/2.4.3/reference/htmlsingle/#boot-features-external-config-files-configtree)
 * [Skaffold - Local Kubernetes Development Made Easy](https://www.youtube.com/watch?v=tTNrzEjROCo)
 * [Skaffold - Github releases](https://github.com/GoogleContainerTools/skaffold/releases)
 * [Google Cloud - Cloud Code](https://cloud.google.com/code)
