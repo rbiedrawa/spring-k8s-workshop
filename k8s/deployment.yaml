@@ -26,10 +26,6 @@ spec:
         resources:
           requests:
             cpu: 800m
-#            memory: 4048Mi
-#          limits:
-            #cpu: 1600m
-#            memory: 4048Mi
         ports:
           - containerPort: 8080
         livenessProbe:
@@ -42,17 +38,19 @@ spec:
           httpGet:
             path: /actuator/health/readiness
             port: 8080
-        envFrom:
-#          - secretRef:
-#              name: spring-k8s-workshop-secret
-          - configMapRef:
-              name: spring-k8s-workshop-configmap
+        volumeMounts:
+          - name: config-volume
+            mountPath: /workspace/config
         env:
           - name: K8S_SECRET
             valueFrom:
               secretKeyRef:
                 name: spring-k8s-workshop-secret
                 key: secret
+      volumes:
+        - name: config-volume
+          configMap:
+            name: spring-k8s-workshop-configmap
 #          - name: APP_HELLO
 #            valueFrom:
 #              configMapKeyRef:
