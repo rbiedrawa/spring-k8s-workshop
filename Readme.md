@@ -70,7 +70,7 @@ Build docker image.
   
 * Make some changes inside HelloController class to see *live reload* feature.
   
-* Stop skaffold dev (`CMD + C`).
+* Stop skaffold dev (`CTRL + C`).
   
 * Run skaffold in debug mode.
     ```shell
