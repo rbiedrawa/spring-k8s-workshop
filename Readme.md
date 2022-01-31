@@ -17,7 +17,7 @@ This repository contains sample Spring Boot application, k8s definitions and sca
 
 ## Getting Started
 
-### Prerequisite
+### Prerequisites
 
 * Java 11
 * Docker
